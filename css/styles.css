@@ -76,6 +76,23 @@ a {
     width: 100%;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
 }
+/* Button */
+.btn {
+    box-shadow: 0 0 10px var(--color-secondary);
+    padding: 1rem 3rem;
+    border-radius: 55px;
+    background-color: var(--color-secondary);
+    border: 1.5px solid var(--color-secondary);
+    font-weight: 500px;
+    font-size: 1rem;
+    transition: background-color .3s, border.3s, color .3s;
+}
+.btn:hover {
+    background-color: var(--background-color);
+    border: 1.5px solid var(--color-secondary);
+    box-shadow: none;
+    color: var(--color-secondary);
+}
 /* Button
 .btn {
     box-shadow: 0 0 10px #4bffa5;
