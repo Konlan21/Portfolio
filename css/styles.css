@@ -4,8 +4,6 @@ body {
     --color-primary: #fff;
     --color-secondary: #4bffa5;
     background-color: var(--background-color);
-    height: 100vh;
-
 }
 a {
     text-decoration: none;
@@ -68,6 +66,9 @@ h1, h2, h3, h4 {
 .backend {
     color: var(--color-secondary);
 }
+.intro__txt {
+    line-height: 1.5;
+}
 .hello {
     font-size: 2rem;
     font-weight: 700;
@@ -93,8 +94,28 @@ p {
     width: 100%;
     animation: img-portfile 8s ease-in-out infinite;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    /* margin-left: 0; */
+    margin-left: -1.6rem;
 }
+/* Icons */
+.body__icons {
+    display: flex;
+    /* font-size: 2rem; */
+    color: var(--color-secondary);
+}
+.bx {
+    padding: .5rem;
+    margin: .5rem;
+    border: 2px solid var(--color-secondary);
+    border-radius: 100%;
+    font-size: 1.5rem;
+    transition: box-shadow .3s;
+}
+.bx:hover {
+    background-color: var(--color-secondary);
+    color: #393131;
+    box-shadow: 0 0 10px var(--color-secondary);
+}
+
 /* Button */
 .btn {
     margin-top: 2rem;
@@ -142,7 +163,7 @@ p {
         margin: -2.7rem 6.5rem 0 0;
     }
     .nav__item {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .portfolio {
@@ -184,6 +205,9 @@ p {
     color: var(--color-secondary);
     font-weight: bold;
     margin: 1rem;
+}
+.skill__bx {
+    border: 0;
 }
 .skill__proficient {
     color: var(--color-secondary);
