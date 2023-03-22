@@ -1,9 +1,11 @@
 body {
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-family:  'Open Sans', Arial, Helvetica, sans-serif;
     --background-color: #242424;
     --color-primary: #fff;
     --color-secondary: #4bffa5;
     background-color: var(--background-color);
+    height: 100vh;
+
 }
 a {
     text-decoration: none;
@@ -105,7 +107,7 @@ p {
     border: 1.5px solid var(--color-secondary);
     font-weight: 500px;
     font-size: 1rem;
-    transition: background-color .3s, border.3s, color .3s;
+    transition: background-color .3s;
 }
 .btn:hover {
     background-color: var(--background-color);
@@ -124,7 +126,7 @@ p {
         font-size: 1.2rem;
     }
     .img {
-        width: 70%;
+        width: 80%;
         /* margin-left: 3rem; */
     }
     .main-body {
@@ -171,6 +173,74 @@ p {
         border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
 }
+/* Skills */
+
+.skill__title, .skill__desc {
+    display: inline-block;
+    color: #fff;
+    margin: 0;
+}
+.skill__title {
+    color: var(--color-secondary);
+    font-weight: bold;
+    margin: 1rem;
+}
+.skill__proficient {
+    color: var(--color-secondary);
+}
+
+
+.skill__card {
+    padding: 0 4rem 1.5rem 4rem;
+    background-color: #2d2a2a;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform .3s, border .3s;
+    margin: .5rem;
+    width: 30%;
+}
+
+.skill__card:hover {
+    border: 1px solid var(--color-secondary);
+    transform: scale(1.03);
+}
+.skills {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 100vh; */
+}
+
+@media screen and (min-width: 768px) {
+    .skills {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+    }
+    .skill__card {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .skills {
+        flex-direction: row;
+        align-items: center;
+    }
+    .skill__card {
+        width: 14%;
+    }
+}
+
+
+
+
+
+
 
 
 
