@@ -4,99 +4,114 @@ body {
     --color-secondary: #4bffa5;
     background-color: var(--background-color);
     font-family:  'Open Sans', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+h1, h2, h3, h4 {
+    color: var(--color-secondary);
+    margin: 0;
 }
 a {
     color: var(--color-secondary);
     text-decoration: none;
 }
-.top-nav {
-    align-items: center;
-    background: var(--background-color);
-    color: var(--color-primary);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* width: 100%; */
-    /* margin-top: 2rem; */
-}
-/* .logo {
-    font-size: 2rem;
-    font-weight: bold;
-} */
-/* .menu__icon {
-    display: block;
-} */
-/* .nav__items {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 1rem 3%;
-} */
-/* .nav__items {
-    display: flex;
-    flex-direction: column;
-} */
-
-.nav__item {
-    /* display: block; */
-    color: var(--color-primary);
-    font-size: 1.5rem;
+li {
     list-style: none;
-    padding: 1rem;
+}
+li > a {
+    color: #d2d0db;
     transition: color .3s;
 }
-
-.nav__item:hover {
+li > a:hover {
     color: var(--color-secondary);
 }
+/* collsapsibles */
+.collapsible__header {
+display: flex;
+justify-content: space-between;
+}
 
+.collapsible__content {
+max-height: 0;
+overflow: hidden;
+opacity: 0;
+transition: all 0.3s;
+}
 
+.collapsible--expanded .collapsible__content {
+max-height: 100vh;
+opacity: 1;
+}
+  
+/* icons */
+.icon {
+    height: 40px;
+    width: 40px;
+    fill: var(--color-primary);
+}
+/* top-nav */
+.logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-left: 0;
+}
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-bottom: 1px solid #323232;
+    cursor: pointer;
+}
+
+.nav__list {
+    width: 100%;
+    margin: 0;
+}
+.nav__item {
+    padding: .6rem;
+    font-size: 1.23rem;
+    width: 100%;
+}
+
+@media screen and (min-width:768px) {
+    .top-nav {
+        background-color: var(--background-color);
+        border-bottom: none;
+    }
+    .nav__toggler {
+        display: none;
+    }
+    .nav__list {
+        width: auto;
+        display: flex;
+        flex-direction: row;
+        max-height: 100%;
+        opacity: 1;
+        margin-right: 4rem;
+    }
+    .nav__item {
+        font-size: 1.1rem;
+        margin-right: 1rem;
+    }
+}
 
 .home {
     color: var(--color-secondary);
 }
 
 
-h1, h2, h3, h4 {
-    color: var(--color-secondary);
-    margin: 0;
-}
-/* @media screen and (min-width:768px) {
-    .top-nav {
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 2rem 4rem;
-    }
-    .nav__item {
-        display: inline;
-    }
-} */
-
-/* @media screen and (min-width:1024px) {
-    .top-nav {
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 2rem 4rem;
-    }
-    .nav__item {
-        display: inline;
-    }
-    .menu__icon {
-        display: none;
-    }
-} */
 
 /* main-body */
 .main-body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin: 3rem 4rem 3rem 1rem;
+    /* margin-top: 3rem; */
+    margin: 3rem 0 0 1rem;
 }
 
 .body__text {
-    /* margin-left: 3rem; */
     color: var(--color-primary);
 }
 .backend {
@@ -104,6 +119,8 @@ h1, h2, h3, h4 {
 }
 .intro__txt {
     line-height: 1.5;
+    padding-right: 3.4rem;
+    font-size: 1.1rem;
 }
 .hello {
     font-size: 2rem;
@@ -111,26 +128,26 @@ h1, h2, h3, h4 {
     margin-bottom: -.4rem;
 }
 .name {
-    font-size: 4rem;
-    margin: 0;
+    font-size: 3rem;
+    margin: -1rem 0 -1rem 0;
 }
 .backend {
     font-size: 2rem;
     font-weight: bold;
-    /* margin-top: 1.3rem; */
 }
 
-/* This paragraph is for lorem to be revisited */
+.im {
+    color: var(--color-primary);
+}
 p {
-    color: #fff;
+    color: var(--color-primary);
 }
 
 .img {
     animation: img-portfile 8s ease-in-out infinite;
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    margin: 3rem 0 1rem 3rem;
-    width: 100%;
-    /* margin-left: -1.6rem; */
+    margin: 3rem 0 1rem -1rem;
+    width: 85vw;
 }
 /* Icons */
 .body__icons {
@@ -173,49 +190,33 @@ p {
 }
 
 @media screen and (min-width:768px) {
-    .top-nav {
-        flex-direction: row;
-        justify-content: center;
-    }
-    /* .logo {
-        display: none;
-    } */
-    .nav__item {
-        font-size: 1.2rem;
-    }
+
     .img {
         align-self: center;
         width: 35rem;
-        /* margin-left: 3rem; */
     }
     .main-body {
         align-items: flex-start;
         margin-left: 1rem;
     }
+    .logo {
+        margin-left: 3rem;
+    }
 }
 
 /* Desktop */
 @media screen and (min-width:1024px) {
-    .top-nav {
-        flex-direction: row;
-        justify-content: flex-end;
-        margin-right: 3rem;
-        /* margin: -2.7rem 6.5rem 0 0; */
-    }
-    .nav__item {
-        font-size: 1.1rem;
-    }
-
-
     .main-body {
     flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
     }
     .img {
-        margin: -1rem 5rem 0 7rem;
-        width: 4;
+        margin: -2.5rem 7rem 0 1rem;
+        width: 41.5%;
     }
     .bd-text {
-        margin-left: 6rem;
+        margin: 2rem 0 0 5rem;
     }
 }
 
@@ -234,9 +235,7 @@ p {
 .skill__h1 {
     font-style: italic;
 }
-/* .fa-linux {
-    font-size: 3rem;
-} */
+
 .skills__icons {
     align-content: center;
     align-items: center;
@@ -252,18 +251,10 @@ p {
     font-size: 3rem;
     /* border: 0; */
 }
-/* .skill__postgresql {
-    grid-row: 1 / 2 ;
-} */
-/* .skill__h2 {
-    margin-bottom: 2rem;
-    text-align: center;
-} */
 
 @media screen and (min-width: 768px) {
     .skills__icons {
         grid-template-columns: repeat(3, 200px);
-        /* grid-template-rows: repeat(3 200px); */
     }
 }
 
@@ -278,6 +269,7 @@ p {
 /* Projects Section */
 
 .projects {
+    font-family: 'Inter';
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -288,7 +280,7 @@ p {
     background: #2f3137;
     border-radius: 6px;
     margin-bottom: 2.5rem;
-    padding: 1rem;
+    /* padding: 1rem; */
     width: 20rem;
     transition: scale .15s;
 }
@@ -307,20 +299,20 @@ p {
 .project__title {
     color: var(--color-secondary);  
     /* font-style: oblique; */
-    margin: 1rem 1rem 1rem 0;
+    margin: .5rem 0 .5rem 1rem;
     font-size: 1rem;
     font-weight: 600;
 }
 
 .project__description {
     color: #fff;
-
+    margin-right: 1rem;
 }
 .project__btns {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: -.5rem 0 1rem -1rem;
+    margin: -1rem 0 2rem -1rem;
 }
 .project__btn {
     background-color: var(--background-color);
@@ -343,7 +335,6 @@ p {
     .project__card {
         margin: 3rem 0 0 2rem ;
         width: 15rem;
-
     }
 }
 
@@ -353,7 +344,7 @@ p {
 
     }
     .project__card {
-        width: 15rem;
+        width: 16rem;
     }
 }
 /* About page */
@@ -375,7 +366,7 @@ p {
     align-self: center;
     border-radius: 60% 40% 40% 70%/60% 30% 70% 50%;
     /* height: 27rem ; */
-    width: 30rem;
+    /* width: 30rem; */
     width: 90vw;
     margin-left: -.5rem;
 }
@@ -385,11 +376,9 @@ p {
         width: 30rem;
     }
 }
-/* TODO: To reasearch and find out why justify content and align items not working on desktop */
 @media screen and (min-width: 1024px) {
     .about {
         flex-direction: row;
-        /* border: 3px solid gold; */
         padding: 5rem;
         gap: 3rem;
         justify-content: center;
