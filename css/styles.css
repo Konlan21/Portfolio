@@ -123,6 +123,7 @@ opacity: 1;
     line-height: 1.5;
     padding-right: 1rem;
     font-size: 1.1rem;
+    font-weight: 400;
 }
 .hello {
     font-size: 2rem;
@@ -146,7 +147,7 @@ p {
 }
 
 .img {
-    animation: img-portfile 8s ease-in-out infinite;
+    /* animation: img-portfile 8s ease-in-out infinite; */
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     margin: 3rem 0 1rem .9rem;
     width: 85vw;
@@ -210,8 +211,9 @@ p {
 @media screen and (min-width:1024px) {
     .main-body {
     flex-direction: row;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
+    margin: auto;
     }
     .img {
         margin: 0 1rem 1rem;
@@ -317,7 +319,7 @@ p {
     border-radius: 6px;
     margin-bottom: 2.5rem;
     /* padding: 1rem; */
-    width: 18rem;
+    width: 90%;
     transition: scale .15s;
 }
 
@@ -357,9 +359,8 @@ p {
     color: var(--color-secondary);
     font-size: .9rem;
     margin-bottom: -1rem;
-    padding: .5rem;
+    padding: .5rem 34%;
     font-weight: bold;
-    /* text-align: center; */
 }
 
 
@@ -409,6 +410,9 @@ p {
     }
     .about__txt {
         padding: 2rem;
+    }
+    .project__btn {
+        padding: .5rem 6.5rem;
     }
 }
 

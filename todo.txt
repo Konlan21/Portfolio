@@ -1,3 +1,0 @@
-> TO RESTYLE ABOUT PAGE WITH MY OWN STYLING USING HTML AND CSS (used bootstrap to generate markup and have to convert it myself)
-
->
