@@ -14,10 +14,10 @@ ScrollReveal({
   delay: 200
 });
 
-ScrollReveal().reveal('.bd-text, .about__h2, .projects__h1, .skills__h1', { origin: 'top' });
-ScrollReveal().reveal('.img, .projects, .skills__icons', { origin: 'bottom' });
+ScrollReveal().reveal('.bd-text, .about__h1, .projects__h1, .skill-h1', { origin: 'top' });
+ScrollReveal().reveal('.img, .projects, .skills__icons, .card', { origin: 'bottom' });
 ScrollReveal().reveal('.bd-text .name, .about__img', { origin: 'left' });
-ScrollReveal().reveal('.bd-text .intro__txt, .about__txt', { origin: 'right' });
+ScrollReveal().reveal('.bd-text .intro__txt, .about__txt, .about__h2', { origin: 'right' });
 
 // typed js
 
