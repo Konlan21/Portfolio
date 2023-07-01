@@ -15,9 +15,9 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.bd-text, .about__h1, .projects__h1, .skill-h1', { origin: 'top' });
-ScrollReveal().reveal('.img, .projects, .skills__icons, .card', { origin: 'bottom' });
-ScrollReveal().reveal('.bd-text .name, .about__img', { origin: 'left' });
-ScrollReveal().reveal('.bd-text .intro__txt, .about__txt, .about__h2', { origin: 'right' });
+ScrollReveal().reveal('.img, .project__2, .skills__icons, .card-three, .card-four', { origin: 'bottom' });
+ScrollReveal().reveal('.bd-text .name, .project__1, .about__img, .card-one', { origin: 'left' });
+ScrollReveal().reveal('.bd-text .intro__txt, .project__3, .about__txt, .about__h2, .card-two', { origin: 'right' });
 
 // typed js
 

@@ -1,0 +1,258 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <style>
+    :root {
+      --background-color: #242424;
+      --form-background-color: #303030;
+      --color-primary: #fff;
+      --color-secondary: #4bffa5;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--color-primary);
+      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    h1, h2 {
+      color: var(--color-primary);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .contact-form {
+      background-color: var(--form-background-color);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid var(--color-secondary);
+      background-color: var(--form-background-color);
+      color: var(--color-primary);
+    }
+
+    .form-group textarea {
+      height: 150px;
+    }
+
+    .form-group button {
+      background-color: var(--color-secondary);
+      color: var(--background-color);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .form-group button:hover {
+      background-color: #32bfa5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="contact-form">
+      <h1>Contact</h1>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <style>
+    :root {
+      --background-color: #242424;
+      --form-background-color: #303030;
+      --color-primary: #fff;
+      --color-secondary: #4bffa5;
+    }
+
+    body {
+      background-color: var(--background-color);
+      color: var(--color-primary);
+      font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    h1, h2 {
+      color: var(--color-primary);
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .contact-form {
+      background-color: var(--form-background-color);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid var(--color-secondary);
+      background-color: var(--form-background-color);
+      color: var(--color-primary);
+    }
+
+    .form-group textarea {
+      height: 150px;
+    }
+
+    .form-group button {
+      background-color: var(--color-secondary);
+      color: var(--background-color);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .form-group button:hover {
+      background-color: #32bfa5;
+    }
+
+    /* Media Queries */
+    @media only screen and (max-width: 767px) {
+      /* Styles for mobile devices */
+      .container {
+        padding: 10px;
+      }
+
+      .contact-form {
+        padding: 20px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      /* Styles for tablets */
+      .container {
+        padding: 20px;
+      }
+
+      .contact-form {
+        padding: 30px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        display: block;
+        width: 100%;
+      }
+
+      .form-group label {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="contact-form">
+      <h1>Contact</h1>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your message" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
